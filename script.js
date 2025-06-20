@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightBtn = document.getElementById('carouselRight');
 
     // Cargar 15 Pokémon populares (IDs del 1 al 15, puedes cambiar el rango o IDs)
-    const pokemonIds = Array.from({length: 15}, (_, i) => i + 1);
+    const pokemonIds = Array.from({length: 100}, (_, i) => i + 1);
     let pokemons = [];
 
     async function fetchPokemons() {
