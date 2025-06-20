@@ -6,16 +6,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Explora el Mundo Pokémon</h1>
+    <div class="background-overlay"></div>
+    <header class="header">
+        <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="Pokémon Logo" class="logo">
+        <button class="login-btn">Iniciar sesión</button>
     </header>
-    <main>
-        <button id="loadPokemonBtn">Cargar Pokémon</button>
-        <div id="pokemonDisplay" class="pokemon-display">
-            <!-- Aquí se mostrarán el nombre y la imagen del Pokémon -->
+    <main class="main-content">
+        <h1 class="main-title">Explora el Mundo Pokémon</h1>
+        <h2 class="main-subtitle">¡Descubre un Pokémon aleatorio cada vez que hagas clic!</h2>
+        <div class="action-area">
+            <button id="loadPokemonBtn" class="netflix-btn">Cargar Pokémon</button>
+            <div id="pokemonDisplay" class="pokemon-display">
+                <!-- Aquí se mostrarán el nombre y la imagen del Pokémon -->
+            </div>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
         Pokémon Landing Page - 2024
     </footer>
     <script src="script.js"></script>

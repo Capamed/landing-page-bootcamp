@@ -1,12 +1,22 @@
 body {
-    background: linear-gradient(135deg, #FFDE00 0%, #3B4CCA 100%);
-    min-height: 100vh;
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.background-overlay {
+    pointer-events: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.8) 100%), url('https://assets.pokemon.com/assets/cms2/img/misc/virtual-backgrounds/masters/explore-galar.jpg') center/cover no-repeat;
+    z-index: 0;
 }
 
 header {
@@ -19,6 +29,20 @@ h1 {
     text-shadow: 2px 2px 0 #FFDE00, 4px 4px 0 #3B4CCA;
     font-size: 2.5rem;
     margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.main-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 32px;
+    text-shadow: 1px 1px 6px #000;
 }
 
 main {
@@ -47,43 +71,85 @@ main {
     color: #FFDE00;
 }
 
-.pokemon-display {
-    background: rgba(255,255,255,0.85);
-    border-radius: 16px;
-    padding: 32px 40px;
-    box-shadow: 0 2px 16px rgba(59,76,202,0.10);
-    min-width: 260px;
-    min-height: 180px;
+.action-area {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.netflix-btn {
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(228, 221, 221, 0.2);
+}
+
+.netflix-btn:hover {
+    background: #b0060f;
+}
+
+.pokemon-display {
+    background: rgba(0,0,0,0.7);
+    border-radius: 8px;
+    padding: 24px 16px;
+    min-width: 220px;
+    min-height: 120px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
 }
 
 .pokemon-display img {
     width: 120px;
     height: 120px;
     object-fit: contain;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
 .pokemon-display h2 {
-    color: #D32D2F;
-    margin: 0 0 10px 0;
-    font-size: 1.5rem;
+    margin: 0 0 8px 0;
+    color: #ffde00;
+    font-size: 1.3rem;
     text-transform: capitalize;
+    text-shadow: 1px 1px 4px #000;
 }
 
-footer {
-    margin-top: 40px;
-    padding: 18px 0;
+.footer {
+    position: relative;
+    z-index: 2;
     width: 100%;
-    background: #3B4CCA;
-    color: #FFDE00;
     text-align: center;
-    font-weight: bold;
+    padding: 24px 0 16px 0;
+    background: transparent;
+    color: #aaa;
+    font-size: 1rem;
     letter-spacing: 1px;
-    font-size: 1.1rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 16px 12px 0 12px;
+    }
+    .main-title {
+        font-size: 2rem;
+    }
+    .main-subtitle {
+        font-size: 1.1rem;
+    }
+    .action-area {
+        max-width: 95vw;
+    }
 }
