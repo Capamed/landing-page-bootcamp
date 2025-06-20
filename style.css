@@ -3,7 +3,7 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-    background: #000;
+    background: #000 url('https://i.pinimg.com/736x/c6/32/a1/c632a1545c3a84d8443456c96921eea2.jpg') center center / cover no-repeat;
     color: #fff;
     position: relative;
     overflow-x: hidden;
@@ -15,8 +15,7 @@ body {
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100vw;
     height: 100vh;
-    /* Overlay mucho más transparente para mayor visibilidad */
-    background: linear-gradient(to top, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.08) 60%, rgba(0,0,0,0.18) 100%), url('https://assets.pokemon.com/assets/cms2/img/misc/virtual-backgrounds/masters/explore-galar.jpg') center/cover no-repeat;
+    background: linear-gradient(to top, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.35) 100%);
     z-index: 0;
 }
 
