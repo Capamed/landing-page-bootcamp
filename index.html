@@ -22,6 +22,10 @@
         </section>
         <section class="carousel-section">
             <h3 class="carousel-title">Pokémon Populares</h3>
+            <form id="pokemonCountForm" class="carousel-form" onsubmit="return false;">
+                <input type="text" id="pokemonCountInput" min="1"  class="netflix-input" placeholder="Cantidad de Pokémon" />
+                <button id="setPokemonCountBtn" class="netflix-btn" type="submit">Mostrar</button>
+            </form>
             <div class="carousel-container">
                 <button class="carousel-btn left" id="carouselLeft">&#10094;</button>
                 <div class="carousel" id="pokemonCarousel">

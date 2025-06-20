@@ -3,12 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.getElementById('pokemonCarousel');
     const leftBtn = document.getElementById('carouselLeft');
     const rightBtn = document.getElementById('carouselRight');
-
-    // Cargar 15 Pokémon populares (IDs del 1 al 15, puedes cambiar el rango o IDs)
-    const pokemonIds = Array.from({length: 100}, (_, i) => i + 1);
+    const countInput = document.getElementById('pokemonCountInput');
+    const countForm = document.getElementById('pokemonCountForm');
     let pokemons = [];
+    let pokemonCount = parseInt(countInput.value, 10) || 15;
 
     async function fetchPokemons() {
+        const pokemonIds = Array.from({length: pokemonCount}, (_, i) => i + 1);
         const promises = pokemonIds.map(id => fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
             .then(res => res.json())
             .catch(() => null));
@@ -47,6 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     rightBtn.addEventListener('click', () => {
         carousel.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+
+    countForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        pokemonCount = parseInt(countInput.value, 10) || 15;
+        fetchPokemons();
     });
 
     fetchPokemons();
