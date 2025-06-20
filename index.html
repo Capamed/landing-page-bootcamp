@@ -12,14 +12,24 @@
         <button class="login-btn">Iniciar sesión</button>
     </header>
     <main class="main-content">
-        <h1 class="main-title">Explora el Mundo Pokémon</h1>
-        <h2 class="main-subtitle">¡Descubre un Pokémon aleatorio cada vez que hagas clic!</h2>
-        <div class="action-area">
-            <button id="loadPokemonBtn" class="netflix-btn">Cargar Pokémon</button>
+        <section class="hero">
+            <h1 class="main-title">Explora el Mundo Pokémon</h1>
+            <h2 class="main-subtitle">¡Atrapa, explora y conoce a tus Pokémon favoritos!</h2>
+            <p class="main-desc">Descubre información y curiosidades de cientos de Pokémon. Desliza el carrusel para ver más y haz clic en tu favorito para verlo en detalle.</p>
             <div id="pokemonDisplay" class="pokemon-display">
-                <!-- Aquí se mostrarán el nombre y la imagen del Pokémon -->
+                <!-- Aquí se mostrará el Pokémon seleccionado -->
             </div>
-        </div>
+        </section>
+        <section class="carousel-section">
+            <h3 class="carousel-title">Pokémon Populares</h3>
+            <div class="carousel-container">
+                <button class="carousel-btn left" id="carouselLeft">&#10094;</button>
+                <div class="carousel" id="pokemonCarousel">
+                    <!-- Aquí se cargarán los Pokémon desde la API -->
+                </div>
+                <button class="carousel-btn right" id="carouselRight">&#10095;</button>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         Pokémon Landing Page - 2024
