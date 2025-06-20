@@ -15,14 +15,24 @@ body {
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100vw;
     height: 100vh;
-    /* Overlay menos oscuro para mayor visibilidad */
-    background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.45) 100%), url('https://assets.pokemon.com/assets/cms2/img/misc/virtual-backgrounds/masters/explore-galar.jpg') center/cover no-repeat;
+    /* Overlay mucho más transparente para mayor visibilidad */
+    background: linear-gradient(to top, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.08) 60%, rgba(0,0,0,0.18) 100%), url('https://assets.pokemon.com/assets/cms2/img/misc/virtual-backgrounds/masters/explore-galar.jpg') center/cover no-repeat;
     z-index: 0;
 }
 
 header {
     margin-top: 40px;
     text-align: center;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px 0 48px;
+}
+
+.logo {
+    height: 48px;
 }
 
 h1 {
@@ -246,6 +256,25 @@ h1 {
     font-size: 1rem;
     letter-spacing: 1px;
     margin-top: 40px;
+}
+
+.login-btn {
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-left: auto;
+    margin-right: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.login-btn:hover {
+    background: #b0060f;
 }
 
 @media (max-width: 600px) {
